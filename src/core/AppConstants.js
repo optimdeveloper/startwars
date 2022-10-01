@@ -1,0 +1,1 @@
+export const TEMP_IMG = "https://picsum.photos/200/300?grayscale"

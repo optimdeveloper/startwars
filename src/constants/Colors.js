@@ -1,0 +1,26 @@
+export default {
+
+    white: "#FFFFFF",
+    black: "#2D2D2D",
+    black_real: "#000000",
+    headerTitleColor: "#1F1F1F",
+    grayColor: "#CCCCCC",
+    editTextUnderlineColor: "#FFFFFF15",
+    editTextHintColor: "#858585",
+    editTextTextColor: "#FFFFFF",
+    errorColor: "#FF3360",
+    buttonColor: "#935DDA",
+    buttonColor2: "#7B5AF380",
+    textButtonColor: "#965EDB",
+    secondaryColor: "#E176F5",
+    linkBlue: "#1937FD",
+    backgroundColor: "#212121",
+    blue: "#1937FD",
+    gray2: "#716E7E",
+    red: "#F9351A",
+    black2: "#181921",
+    buttonTextColor: "#201B18",
+    textPrimaryColor: "#858585",
+    darkYellow: "#DCB52F",
+    transparent: "transparent"
+}

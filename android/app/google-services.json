@@ -1,0 +1,78 @@
+{
+  "project_info": {
+    "project_number": "837193845999",
+    "project_id": "fitlogger-69a2a",
+    "storage_bucket": "fitlogger-69a2a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:837193845999:android:bd4ec67aa46db15e8b5f1a",
+        "android_client_info": {
+          "package_name": "com.fitlogger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "837193845999-265mrc530ohro3s65h38mo26ks0cftia.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fitlogger",
+            "certificate_hash": "131e37a6dad7584e98d04a55d4f3d3c4111dab37"
+          }
+        },
+        {
+          "client_id": "837193845999-2cck24qhf146elcj5bgj4ivj02cka6t7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fitlogger",
+            "certificate_hash": "d880472180e0372f4f94a6b85d8ffeca9e850c30"
+          }
+        },
+        {
+          "client_id": "837193845999-pdauuuhm4fgeqhkkfgh4gdlq28ptfoie.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fitlogger",
+            "certificate_hash": "831d50699075e326457a1d02943926532f3bf0f9"
+          }
+        },
+        {
+          "client_id": "837193845999-pvnga1cbrpdrji65n91vviuubeqlrvqt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fitlogger",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "837193845999-oq21ejk7u47vkbtpn8q31glpf6o94u9s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqP0W8ba43v9xJXCpKrH221TYo0vp-vDk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "837193845999-oq21ejk7u47vkbtpn8q31glpf6o94u9s.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "837193845999-7fn8qq4us54uoolgbrocemncral5cmam.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.amin.fitlogger"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

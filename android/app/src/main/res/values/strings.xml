@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FitLogger</string>
+    <string name="facebook_app_id">425275831923218</string>
+<string name="fb_login_protocol_scheme">fb425275831923218</string>
+</resources>

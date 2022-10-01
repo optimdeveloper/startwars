@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">837193845999-oq21ejk7u47vkbtpn8q31glpf6o94u9s.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">837193845999</string>
+    <string name="google_api_key" translatable="false">AIzaSyCqP0W8ba43v9xJXCpKrH221TYo0vp-vDk</string>
+    <string name="google_app_id" translatable="false">1:837193845999:android:bd4ec67aa46db15e8b5f1a</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCqP0W8ba43v9xJXCpKrH221TYo0vp-vDk</string>
+    <string name="google_storage_bucket" translatable="false">fitlogger-69a2a.appspot.com</string>
+    <string name="project_id" translatable="false">fitlogger-69a2a</string>
+</resources>

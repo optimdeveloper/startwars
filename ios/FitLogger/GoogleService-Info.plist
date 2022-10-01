@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>837193845999-7fn8qq4us54uoolgbrocemncral5cmam.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.837193845999-7fn8qq4us54uoolgbrocemncral5cmam</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>837193845999-265mrc530ohro3s65h38mo26ks0cftia.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA6KWV3l9bKXqOAmfy4gH8SJTr3bwNhoHg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>837193845999</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.amin.fitlogger</string>
+	<key>PROJECT_ID</key>
+	<string>fitlogger-69a2a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>fitlogger-69a2a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:837193845999:ios:67e8c28dbe82d4698b5f1a</string>
+</dict>
+</plist>
