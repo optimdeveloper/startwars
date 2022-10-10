@@ -7,3 +7,7 @@ export const setPeople = (people) => {
         payload: people
     }
 }
+export const getPeople = (people) => {
+
+    
+}

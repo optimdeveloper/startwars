@@ -1,34 +1,23 @@
 import React, { useRef, useEffect } from 'react'
 import { useState } from 'react'
-import { View, Text, FlatList, RefreshControl } from 'react-native'
+import { View, Text, FlatList, RefreshControl, SafeAreaView } from 'react-native'
 import { CommonStyle, ProgressView, NoDataView, ScrollContainer } from '../common'
 import Indicator from '../CommonComponents/Indicator'
 
 export default function MyFlatList({ renderItem,
     numColumns, style, loading, extraData, data,
-    onRefresh, refreshing, onEndReached, noDataMsg, footerComponent,onLoadMore }) {
+    onRefresh, refreshing, noDataMsg, footerComponent,onLoadMore,onEndReached }) {
     const [initLoadMore,setInitLoadMore]=useState(false)
     const flatList = useRef(null)
 
-    // useEffect(() => {
-
-    //     if (footerComponent && flatList && flatList.current) {
-    //         setTimeout(() => {
-
-    //             flatList.curre   nt.scrollToEnd({ animated: true })
-
-    //         }, 100)
-    //     }
-    // }, [footerComponent])
     renderList = () => {
 
-        return (<FlatList
-            onLayout={(e) => {
-                console.log("e")
-            }}
-            onMomentumScrollEnd={(e) => {
-                setInitLoadMore(true)
-              }}
+        return (
+     
+        <FlatList
+          
+            contentContainerStyle={{flexGrow: 1}}
+            ListFooterComponent={footerComponent}
             showsHorizontalScrollIndicator={false}
             showsVerticalScrollIndicator={false}
             data={data}
@@ -41,15 +30,11 @@ export default function MyFlatList({ renderItem,
             extraData={extraData}
             renderItem={renderItem}
             keyExtractor={(item, index) => "key" + index}
-            onEndReached={(d)=>{
-               if(initLoadMore){
-                if(data.length >= 10) onLoadMore()
-               }
-             }
-            }
-            onEndReachedThreshold={0.05}
-            ListFooterComponent={footerComponent}
-        />)
+            onEndReached={onEndReached}
+            onEndReachedThreshold={0.01}
+        />
+      
+        )
 
     }
 
@@ -74,11 +59,9 @@ export default function MyFlatList({ renderItem,
 
     }
 
-    return (
-        <View style={CommonStyle.containerStyle}>
-
-            {render()}
-
-        </View>
+    return (  
+        <SafeAreaView style={{flex:1}}>
+      {render()}
+    </SafeAreaView>
     )
 }

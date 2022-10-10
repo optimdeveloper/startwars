@@ -2,28 +2,47 @@
 import React, {useEffect, useState} from "react";
 import {
     MainContainer,
+    MyFlatList,
     ScrollContainer,
 } from "../common";
 import styles from './styles'
 import { homeApi } from "./HomeApi";
-import CardPerson from "./CardPerson";
+
 import { store } from '../../App'
 import { setPeople } from "../../actions/HomeActions";
 import { WrappedComponent } from "../CommonComponents";
-
+import { useDispatch } from "react-redux";
+import CardPerson from "./CardPerson";
+import { StyleSheet, Text, View, SafeAreaView, FlatList, ActivityIndicator, Button } from 'react-native';
 let page=1
 const Home = () => {
   const [ivisible,setVisible]=useState(false)
+  const [isListEnd,setIsListEnd]=useState(false)
+  const [moreLoading,setMoreLoading]=useState(false)
 
+  const dispatch = useDispatch();
   const [data,setData]=useState([])
+  const [refreshing, setRefreshing] = useState(false)
+  const renderFooter = () => (
+    <View style={styles.footerText}>
+        {moreLoading && <ActivityIndicator />}
+        {isListEnd && <Text>No more data at the moment</Text>}
+    </View>
+)
+const renderEndReached = () => {
+  if (!isListEnd && !moreLoading) {
+    //setPage(page + 1)
+    page=page+1
+    getData()
+  }
+}
     useEffect(() => {
        getData()
     }, []);
 
     const getData = async () => {
-  
+      page==1 ? setVisible(true) :setMoreLoading(true)
         homeApi.getDashboardData(page,async(res) => {
-            setVisible(true)
            let people=store.getState().common.people
            for (let i = 0; res.results.length > i; i++) {
           const planet=await homeApi.getPlanet(res.results[i].homeworld.split('/')[5])
@@ -44,7 +63,8 @@ const Home = () => {
           
            setData(people)
            setVisible(false)
-           store.dispatch(setPeople(people))
+           setMoreLoading(false)
+           dispatch(setPeople(people))
            
            
         }, () => {
@@ -57,15 +77,31 @@ const Home = () => {
    if(!ivisible) {
     getData()
 }
-   
   }
     return (
         <MainContainer header={{ title: "People Of Star Wars",noLeft:true}}>
            
-           <CardPerson data={data} loadMore={loadMoreData} loading={ivisible} />
+          <View style={{flex: 1}}>
+            <MyFlatList
+                          footerComponent={renderFooter}
+                          showsVerticalScrollIndicator={true}
+                          loading={ivisible}
+                          data={data}
+                          refreshing={refreshing}
+                          onRefresh={() => setRefreshing(true)}
+                       
+                          onEndReached={renderEndReached}
+                          renderItem={({ item }) => (
+                          <CardPerson item={item}></CardPerson>
+                            
+                        )}
+                      />
+            
+            </View>
            
         </MainContainer>
     );
 };
 
 export default WrappedComponent(Home)
+

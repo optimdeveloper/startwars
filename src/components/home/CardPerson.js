@@ -1,33 +1,16 @@
 import React from "react";
 import { useState } from "react";
-import {
-  Dimensions,
-  FlatList,
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
+
 import { Colors, Fonts, Images } from "../../constants";
 import { Clickable, ImageButton, MyFlatList } from "../common";
 import {navigate, push, reset} from "../../navigation/RootNavigation";
+import { StyleSheet, Text, View, SafeAreaView, FlatList, ActivityIndicator, Button } from 'react-native';
 
-export default function CardPerson({ data,loadMore,loading }) {
+export default function CardPerson({ item }) {
 
-  const [refreshing, setRefreshing] = useState(false)
-  
   return (
   <View style={{flex: 1}}>
-   <MyFlatList
-                    
-                    showsVerticalScrollIndicator={true}
-                    loading={loading}
-                    data={data}
-                    refreshing={refreshing}
-                    onRefresh={() => setRefreshing(true)}
-                    onLoadMore={loadMore}
-                    renderItem={({ item }) => (
+  
                       <Clickable onPress={() => {
                         navigate("Measurement",{data:item})
                     }}>
@@ -44,10 +27,6 @@ export default function CardPerson({ data,loadMore,loading }) {
                         </View>
                       </View>
                     </Clickable>
-                      
-                  )}
-                />
-      
    </View>
   );
 }
@@ -56,6 +35,12 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     flex: 3,
   },
+  footerText: {
+    flex: 1, 
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginVertical: 10
+},
   containerTop: {
     flex: 1,
   },

@@ -11,6 +11,12 @@ export default styles = StyleSheet.create({
         justifyContent: "center"
 
     },
+    footerText: {
+        flex: 1, 
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginVertical: 10
+    },
     topBarStyle: {
         flex: 1,
         marginBottom: 8,
