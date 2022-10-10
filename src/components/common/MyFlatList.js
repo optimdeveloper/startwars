@@ -6,8 +6,7 @@ import Indicator from '../CommonComponents/Indicator'
 
 export default function MyFlatList({ renderItem,
     numColumns, style, loading, extraData, data,
-    onRefresh, refreshing, noDataMsg, footerComponent,onLoadMore,onEndReached }) {
-    const [initLoadMore,setInitLoadMore]=useState(false)
+    onRefresh, refreshing, noDataMsg, footerComponent,onEndReached }) {
     const flatList = useRef(null)
 
     renderList = () => {

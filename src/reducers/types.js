@@ -188,6 +188,12 @@ export const COMMON_SET_USER_TYPE = 'COMMON_SET_USER_TYPE'.toLowerCase();
 export const COMMON_SET_IS_VIP = 'COMMON_SET_IS_VIP'.toLowerCase();
 export const COMMON_SET_IS_GUEST = 'COMMON_SET_IS_GUEST'.toLowerCase();
 export const COMMON_SET_PEOPLE = 'COMMON_SET_PEOPLE'.toLowerCase();
+export const COMMON_SET_LOADING = 'COMMON_SET_LOADING'.toLowerCase();
+export const COMMON_SET_MORE_LOADING = 'COMMON_SET_MORE_LOADING'.toLowerCase();
+export const COMMON_SET_ERROR = 'COMMON_SET_MORE_LOADING'.toLowerCase();
+
+
+
 
 
 

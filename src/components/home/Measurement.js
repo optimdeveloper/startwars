@@ -68,7 +68,7 @@ export default function Measurement({ navigation, session, route }) {
                        </View> 
                        {user.vehicles.map(item=>
                         
-                        <View style={styles.containerB}>
+                        <View key={item} style={styles.containerB}>
                  
                         <Text style={styles.labelV}>{item}</Text>
                             
